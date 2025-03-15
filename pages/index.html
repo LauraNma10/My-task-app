@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Board</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Homepage Design</h2>
+        <div class="board">
+            <div class="column" id="task-ready">
+                <h3>Task Ready</h3>
+                <button onclick="addTask('task-ready')">Add Task</button>
+                <div class="task-list"></div>
+            </div>
+            <div class="column" id="in-progress">
+                <h3>In Progress</h3>
+                <butto n onclick="addTask('in-progress')">Add Task</button>
+                <div class="task-list"></div>
+            </div>
+            <div class="column" id="needs-review">
+                <h3>Needs Review</h3>
+                <button onclick="addTask('needs-review')">Add Task</button>
+                <div class="task-list"></div>
+            </div>
+            <div class="column" id="done">
+                <h3>Done</h3>
+                <button onclick="addTask('done')">Add Task</button>
+                <div class="task-list"></div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="progress">
+                <h3>Task Progress</h3>
+                <div class="progress-bar" onclick="alert('Copywriting progress clicked!')">Copywriting: <span>3/8</span></div>
+                <div class="progress-bar" onclick="alert('Illustration progress clicked!')">Illustration: <span>6/10</span></div>
+                <div class="progress-bar" onclick="alert('UI Design progress clicked!')">UI Design: <span>7/7</span></div>
+            </div>
+            <div class="activity">
+                <h3>Recent Activity</h3>
+                <ul id="activity-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

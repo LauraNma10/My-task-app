@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f299e, #45206b);
+    margin: 0;
+    padding: 20px;
+    color: white;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    color: black;
+}
+h2 {
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    color: white;
+}
+.board {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.column {
+    background: whitesmoke;
+    padding: 15px;
+    width: 250px;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.column:hover {
+    transform: scale(1.05);
+}
+.task {
+    background: whitesmoke;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.sidebar {
+    margin-top: 20px;
+    padding: 15px;
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+.sidebar:hover {
+    transform: scale(1.03);
+}
+.progress-bar {
+    background-color: #0f299e;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.progress-bar:hover {
+    background-color: #bbb;
+}
+.activity ul {
+    list-style: none;
+    padding: 0;
+}
+.activity li {
+    background-color: #0f299e;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.activity li:hover {
+    transform: scale(1.05);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@media (max-width: 768px) {
+    .board {
+        flex-direction: column;
+        align-items: center;
+    }
+    .column {
+        width: 90%;
+    }
+    .sidebar {
+        width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    .column {
+        width: 100%;
+        padding: 10px;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
